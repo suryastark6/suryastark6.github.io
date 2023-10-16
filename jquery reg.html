@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  #registration-form {
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+<div id="registration-form">
+  <h2>Registration</h2>
+  <form id="registration">
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Middle Name">
+    <input type="text" placeholder="Last Name" required>
+    <input type="date" placeholder="Date of Birth" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <input type="password" placeholder="Confirm Password" required>
+    <button id="register-btn">Register</button>
+  </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#register-btn").click(function(event) {
+      event.preventDefault();
+      // You can add form validation and submission logic here
+      // For this example, let's just display a success message
+      alert("Registration Successful!");
+      
+      // Animate diagonal color shift
+      animateDiagonalColors();
+    });
+
+    function animateDiagonalColors() {
+      const inputs = $("input");
+      const originalColors = [];
+
+      // Store original colors and update with diagonal colors
+      inputs.each(function(index) {
+        originalColors[index] = $(this).css("background-color");
+        $(this).css("background-color", getColorForDiagonal(index));
+      });
+
+      // Animate colors back to original
+      inputs.animate({ backgroundColor: originalColors.join(", ") }, 1000, function() {
+        $(this).css("background-color", "");
+      });
+    }
+
+    function getColorForDiagonal(index) {
+      const colors = ["#FF5733", "#C70039", "#900C3F", "#581845", "#2C3E50", "#154360"];
+      return colors[index % colors.length];
+    }
+  });
+</script>
+ 
+
+</body>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("wall.gif"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+</style>
+</html>

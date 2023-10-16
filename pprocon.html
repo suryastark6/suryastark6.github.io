@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO-CON</title>
+    <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+    <div id="web">
+    <h1>Pro-con</h1>
+
+    <label for="titleInput"><strong>Title:</strong></label>
+    <input type="text" id="titleInput" style="width: 1100px "placeholder="Enter a title"><br>
+   
+    <h1>Choose Category:</h1>&nbsp;&nbsp;
+    <div class="dropdown">  
+        <select id="options"  style="width: 1150px"  >
+            <option value="option1">select Category</option>
+            <option value="option2">IOT</option>
+            <option value="option3">Embedded systems</option>
+            <option value="option4">Frontend Development</option>
+            <option value="option5">Backend Development</option>
+            <option value="option6">Mobile App Development</option>
+            <option value="option7">Artificial Intelligence</option>
+            <option value="option8">Fullstack Development</option>
+            
+        </select>
+        <h1>Enter your content:</h1>
+
+        <textarea id="content" cols="20"></textarea>
+      <br> <br>
+
+        <button type="button" onclick="saveContent()">Save</button>
+      
+      
+      
+
+    <div id="savedContent">
+        <h2 id="title"></h2>
+        <p id="content"></p>
+    </div>
+</div>
+    <script>
+        document.getElementById('saveButton').addEventListener('click', function() {
+            var title = document.getElementById('titleInput').value;
+            var content = document.getElementById('contentInput').value;
+            function saveContent() {
+            var content = document.getElementById("content").value;
+      
+            // Save the content to a file or database here.
+          } 
+            document.getElementById('title').textContent = title;
+            document.getElementById('content').textContent = content;
+
+            // You can also save this data to a file or a server using AJAX.
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRO CON</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="navbar" id="myNavbar">
+    <div id="logo" >
+      
+      <img id="loogo" src="logo.png" width="50px" height="50px"><h1 id="topno">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME 
+      </h1>
+      
+
+    </div>
+    
+    <button class="toggle-btn" onclick="toggleNavbar()">☰</button>
+    <div class="dropdown-content" id="myDropdown">
+      <a  href="#home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-house"></i>&nbsp;&nbsp;</i> Home</a>
+      <a href="#explore"><i class="fa-solid fa-magnifying-glass">&nbsp;&nbsp;</i>Explore</a>
+      <a href="pprocon.html"><i class="fa-solid fa-star">&nbsp;&nbsp;</i>ProCon</a>
+      <a href="about.html"><i class="fa-solid fa-address-card">&nbsp;&nbsp;</i>About</a>
+      <a href="login.html"><i class="fa-solid fa-right-to-bracket">&nbsp;&nbsp;</i>Login/Signup</a>
+    </div>
+  </div>
+
+  
+</style>
+
+<!--cards-->
+  </style>
+  
+  <div class="card-container">
+    <div class="card">
+      <a href="page1.html">
+        <img src="iotpic.jpg" alt="iotpic">
+        <div class="card-text">
+          <h3>Internet of Things</h3>
+          <p>Internet of things
+          </p>
+        </div>
+      </a>
+    </div>
+    
+    <div class="card">
+      <a href="page2.html">
+        <img src="embepic.jpg" alt="embadded pic">
+        <div class="card-text">
+          <h3>Embedded Systems</h3>
+          <p>Embedded Systems</p>
+        </div>
+      </a>
+    </div>
+    
+    <div class="card">
+      <a href="page3.html">
+        <img src="frontend.png" alt="frontend">
+        <div class="card-text">
+          <h3>Frontend Development</h3>
+          <p>Frontend Development</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="page3.html">
+        <img src="backend.jpg" alt="Image 3">
+        <div class="card-text">
+          <h3>Backend Development</h3>
+          <p>Backend Development</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="page3.html">
+        <img src="moddev.png" alt="Image 3">
+        <div class="card-text">
+          <h3>Mobile app development</h3>
+          <p>Mobile app development</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="page4.html">
+        <img src="ai.jpg" alt="Image 3">
+        <div class="card-text">
+          <h3>Artificial Intelligence</h3>
+          <p>Artificial Intelligence</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="page3.html">
+        <img src="full.jpg" alt="Image 3">
+        <div class="card-text">
+          <h3>Fullstack Development</h3>
+          <p>Fullstack Development</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Repeat the above card structure for more cards -->
+  </div>
+<hr class="bookends">
+
+<div class="vid">
+  <video controls style="width: 800px; height: 300px; border-radius: 30px; border-top-left-radius: 30px; border-top-right-radius: 30px; background-color: rgba(0, 0, 0, 0.634);" >
+    <source src="proc.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+</div>
+
+  
+
+
+  <script>
+    function toggleNavbar() {
+      var navbar = document.getElementById("myNavbar");
+      navbar.classList.toggle("expanded");
+    }
+  </script>
+
+</body>
+
+</html>
